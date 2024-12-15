@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins";
+  background-color: hsl(0, 100%, 74%);
+  background-image: url(images/bg-intro-desktop.png);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 97vh;
+}
+main .words {
+  flex: 1;
+  margin: 0 0px 50px 110px;
+  color: white;
+}
+main .words h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  padding: 0 100px 0 0;
+}
+main .words p {
+  font-size: 14px;
+  padding: 0 80px 0 0;
+}
+
+main .sign {
+  flex: 1;
+  margin: 0 200px 0 0;
+}
+
+main .sign span {
+  display: block;
+  background-color: hsl(248, 32%, 49%);
+  padding: 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  color: white;
+  font-size: 12px;
+  font-weight: 200;
+  text-align: center;
+}
+main .sign .sign-info form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+}
+main .sign .sign-info .form-control {
+  position: relative;
+  margin-bottom: 25px;
+}
+main .sign .sign-info .form-control.error {
+  opacity: 1;
+}
+main .sign .sign-info .form-control input {
+  padding: 18px;
+  border-radius: 4px;
+  border: 1px solid hsl(246, 25%, 77%);
+  width: 100%;
+  outline: none;
+}
+main .sign .sign-info .form-control.error input {
+  border-color: hsl(0, 100%, 74%);
+}
+.form-control small {
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+  position: absolute;
+  bottom: -24px;
+  right: 0;
+  opacity: 0;
+  text-align: right;
+}
+.form-control.error input {
+  color: hsl(0, 100%, 74%);
+  border-color: hsl(0, 100%, 74%);
+}
+.form-control.error input::placeholder {
+  color: hsl(0, 100%, 74%);
+}
+.form-control img {
+  opacity: 0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.form-control.error img {
+  opacity: 1;
+}
+
+.form-control small {
+  opacity: 0;
+}
+
+.form-control.error small {
+  opacity: 1;
+}
+main .sign .sign-info input::placeholder {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+}
+main .sign button {
+  background-color: hsl(154, 59%, 51%);
+  padding: 15px;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+main .sign p {
+  color: hsl(246, 25%, 77%);
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+main .sign p b {
+  color: hsl(0, 100%, 74%);
+}
+
+@media (width<= 480px) {
+  main {
+    flex-direction: column;
+  }
+  main .words {
+    margin: 70px auto 30px;
+    text-align: center;
+    padding: 0 10px;
+    flex: 0;
+  }
+  main .words h1 {
+    padding: 0;
+    font-size: 35px;
+  }
+  main .words p {
+    padding: 0;
+    font-size: 18px;
+  }
+  main .sign {
+    margin: 0 20px;
+  }
+  main .sign span {
+    padding: 20px 80px;
+    font-size: 18px;
+  }
+  main .sign .sign-info {
+    gap: 20px;
+  }
+  main .sign .sign-info input {
+    padding: 20px;
+  }
+  main .sign .sign-info button {
+    padding: 20px;
+    font-size: 18px;
+  }
+  main .sign .sign-info p {
+    font-size: 12px;
+  }
+}
